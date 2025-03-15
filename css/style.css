@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 1em;
     color: var(--cor_fonte);
 }
 
@@ -46,13 +45,17 @@ a.externo:hover, a.interno:hover {
 
 /* Cabeçalho */
 header {
-    padding: 25px;
+    padding: 100px 25px 25px;
     text-align: center;
     background-color: var(--cor1);
+    box-shadow: 0px 7px 7px var(--sombra);
 }
 
 /* Barra de navegação */
 nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
     padding: 25px;
     background-color: var(--cor1);
     box-shadow: 0px 7px 7px var(--sombra);
@@ -68,26 +71,31 @@ main {
     background-color: var(--cor2);
 }
 
-.video {
-    margin: auto;
-    min-width: 400px;
-    max-width: 600px;
+h2 {
+    text-align: justify;
 }
 
 .url {
-    width: 75%;
+    margin: 15px;
+    width: 90%;
     padding: 5px;
     border: none;
     border-radius: 10px;
-    margin: 10px;
+}
+
+form {
+    padding: 10px;
 }
 
 .url:hover {
     border: 2px solid var(--cor_borda);
 }
 
-form {
-    padding: 10px;
+.thumb {
+    display: none;
+    margin: auto;
+    width: 90%;
+    height: 200px;
 }
 
 h2 {
@@ -98,11 +106,14 @@ form div {
     margin: 10px;
 }
 
+div.change {
+    display: none;
+}
+
 div.barra {
     border-radius: 10px;
     width: 150px;
     height: 15px;
-    display: none;
 }
 
 .container {
@@ -111,9 +122,12 @@ div.barra {
     border-radius: 15px;
 }
 
-.button {
-    min-width: 250px;
-    max-width: 750px;
+.msg {
+    color: var(--cor_fonte);
+    background-color: var(--cor3);
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
 }
 
 .submit{
@@ -128,7 +142,7 @@ div.barra {
 }
 
 .submit:hover {
-    border: 1px solid var(--cor_borda);
+    border: 2px solid var(--cor_borda);
 }
 
 /* Rodapé */
@@ -147,4 +161,10 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     font-weight: bolder;
+}
+
+.referencia {
+    margin: auto;
+    padding: 10px;
+    width: 75vw;
 }

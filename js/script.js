@@ -1,16 +1,24 @@
 // Bibliotecas
 
-// Tags
-url = document.getElementById('url');
-mp3 = document.getElementById("mp3");
-mp4 = document.getElementById("mp4");
-resume = document.getElementById("resume");
+// Tags Importadas
+let preferencia = document.querySelector('form#preferencia');
+let url = document.getElementById('url');
+let change_mp3 = document.querySelector('div#change_mp3');
+let change_mp4 = document.querySelector('div#change_mp4');
+
+// Comandos
+// Barra de progressão
 
 // Funções
-if (mp3 == True) {} else if (mp4 == True) {} else if (resume == True) {};
+preferencia.addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita o comportamento padrão do formulário
 
-// Ano
-var data = new Date();
-var atual = data.getFullYear();
-var ano = document.querySelector('div#ano');
-ano.innerHTML = `${atual}`;
+    // Obtém a opção selecionada
+    const opcaoSelecionada = document.querySelector('input[name="select"]:checked');
+
+    // Verifica se há uma opção selecionada e exibe o conteúdo relacionado
+    if (opcaoSelecionada) {
+    const idConteudo = opcaoSelecionada.value;
+    document.getElementById(idConteudo).style.display = "block";
+    }
+});

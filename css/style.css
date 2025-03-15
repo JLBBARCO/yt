@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* Config padrão */
+:root {
+    --cor_fonte: #fff;
+    --cor_borda: #bbb;
+    --cor1: #ff0000;
+    --cor2: #222;
+    --cor3: #888;
+    --sombra: #0000006b;
+}
+
+/* Config geral */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1em;
+    color: var(--cor_fonte);
+}
+
+body {
+    background-color: var(--cor3);
+}
+
+a.interno, a.externo {
+    text-decoration: none;
+    color: var(--cor_fonte);
+}
+
+a.externo:after {
+    content: '\1F517';
+}
+
+a.externo:hover, a.interno:hover {
+    text-decoration: underline;
+}
+
+/* Cabeçalho */
+header {
+    padding: 25px;
+    text-align: center;
+    background-color: var(--cor1);
+}
+
+/* Barra de navegação */
+nav {
+    padding: 25px;
+    background-color: var(--cor1);
+    box-shadow: 0px 7px 7px var(--sombra);
+}
+
+nav a:hover {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--cor_borda);
+}
+
+/* Conteúdo */
+main {
+    padding: 50px;
+    margin: auto;
+    min-width: 250px;
+    max-width: 750px;
+    box-shadow: inset 0px -7px 7px var(--sombra);
+    background-color: var(--cor2);
+}
+
+.video {
+    margin: auto;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.url {
+    width: 75%;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.url:hover {
+    border: 2px solid var(--cor_borda);
+}
+
+form {
+    padding: 10px;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+form div {
+    margin: 10px;
+}
+
+div.barra {
+    border-radius: 10px;
+    width: 150px;
+    height: 15px;
+    display: none;
+}
+
+.button {
+    margin: 0 50%;
+}
+
+.submit{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--cor_fonte);
+    background-color: var(--cor3);
+    border: none;
+}
+
+.submit:hover {
+    border: 1px solid var(--cor_borda);
+}
+
+/* Rodapé */
+footer {
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px -7px 7px var(--sombra);
+    background-color: var(--cor1);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor_fonte);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}

@@ -3,17 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Youtube Extensões</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
 </head>
 <body>
-    <header></header>
-    <nav></nav>
-    <main></main>
+    <header>
+        <h1>Downloader e Resumidor de Vídeos do <a href="https://youtube.com" target="_blank" class="externo">YouTube</a></h1>
+    </header>
+    <nav>
+        <a href="https://jlbbarco.github.io/" class="interno">Home</a>
+    </nav>
+    <main>
+        <section>
+            <form method="get">
+                <div class="video">
+                    <label for="url">URL: </label>
+                    <input type="url" name="video" id="video" placeholder="https://youtube.com/" class="url">
+                </div>
+                <h2>Selecione um campo para definir o que fazer</h2>
+                <div>
+                    <input type="radio" name="select" id="mp3">
+                    <label for="mp3">Download MP3 <br>
+                    <div class="change">
+                        <div class="msg"></div>
+                        <div class="barra"></div>
+                        <div class="porcent"></div>
+                    </div></label>
+                </div>
+                <div>
+                    <input type="radio" name="select" id="mp4">
+                    <label for="mp4">Download MP4 <br>
+                    <div class="change">
+                        <div class="msg"></div>
+                        <div class="barra"></div>
+                        <div class="porcent"></div>
+                    </div></label>
+                </div>
+                <div>
+                    <input type="radio" name="select" id="resume" checked>
+                    <label for="resume">Resumo do vídeo <br><div class="change">
+                        <div class="msg"></div>
+                        <div class="barra"></div>
+                        <div class="porcent"></div>
+                    </div></label>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Confirmar" class="submit">
+                </div>
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>
+        <div>
             Site criado por <a href="http://github.com/JLBBARCO" target="_blank" rel="noopener noreferrer">José Luiz B Barco</a>
-        </p>
+        </div>
         <div id="ano"></div>
     </footer>
     <script src="js/script.js"></script>

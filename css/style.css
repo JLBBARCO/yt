@@ -4,6 +4,8 @@
 :root {
     --cor_fonte: #fff;
     --cor_borda: #bbb;
+    --cor_form: #8888;
+    --cor_bc_hover: #9c0000;
     --cor1: #ff0000;
     --cor2: #222;
     --cor3: #888;
@@ -26,6 +28,8 @@ body {
 a.interno, a.externo {
     text-decoration: none;
     color: var(--cor_fonte);
+    transition: all;
+    transition-duration: .5s;
 }
 
 a.externo:after {
@@ -34,6 +38,10 @@ a.externo:after {
 
 a.externo:hover, a.interno:hover {
     text-decoration: underline;
+    background-color: var(--cor_bc_hover);
+    padding: 10px;
+    border: 1px solid var(--cor_borda);
+    border-radius: 10px;
 }
 
 /* Cabeçalho */
@@ -48,12 +56,6 @@ nav {
     padding: 25px;
     background-color: var(--cor1);
     box-shadow: 0px 7px 7px var(--sombra);
-}
-
-nav a:hover {
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--cor_borda);
 }
 
 /* Conteúdo */
@@ -103,13 +105,22 @@ div.barra {
     display: none;
 }
 
+.container {
+    background-color: var(--cor_form);
+    padding: 15px;
+    border-radius: 15px;
+}
+
 .button {
-    margin: 0 50%;
+    min-width: 250px;
+    max-width: 750px;
 }
 
 .submit{
-    margin: 5px;
-    padding: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px;
     border-radius: 10px;
     color: var(--cor_fonte);
     background-color: var(--cor3);

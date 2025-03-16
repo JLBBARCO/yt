@@ -6,6 +6,7 @@
     --cor_borda: #bbb;
     --cor_form: #8888;
     --cor_bc_hover: #9c0000;
+    --carregado: #00ff00;
     --cor1: #ff0000;
     --cor2: #222;
     --cor3: #888;
@@ -14,6 +15,7 @@
 
 /* Config geral */
 * {
+    color: lightgreen;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,10 +39,6 @@ a.externo:after {
 
 a.externo:hover, a.interno:hover {
     text-decoration: underline;
-    background-color: var(--cor_bc_hover);
-    padding: 10px;
-    border: 1px solid var(--cor_borda);
-    border-radius: 10px;
 }
 
 /* Cabeçalho */
@@ -61,6 +59,13 @@ nav {
     box-shadow: 0px 7px 7px var(--sombra);
 }
 
+nav a:hover {
+    padding: 10px;
+    border: 2px solid var(--cor_borda);
+    border-radius: 10px;
+    background-color: var(--cor_bc_hover);
+}
+
 /* Conteúdo */
 main {
     padding: 50px;
@@ -75,27 +80,21 @@ h2 {
     text-align: justify;
 }
 
+form {
+    padding: 10px;
+}
+
 .url {
     margin: 15px;
     width: 90%;
     padding: 5px;
     border: none;
     border-radius: 10px;
-}
-
-form {
-    padding: 10px;
+    color: black;
 }
 
 .url:hover {
     border: 2px solid var(--cor_borda);
-}
-
-.thumb {
-    display: none;
-    margin: auto;
-    width: 90%;
-    height: 200px;
 }
 
 h2 {
@@ -106,14 +105,37 @@ form div {
     margin: 10px;
 }
 
-div.change {
-    display: none;
+#change1 {
+    position: relative;
+}
+
+iframe.youtube_video {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
 }
 
 div.barra {
     border-radius: 10px;
     width: 150px;
     height: 15px;
+    background-color: #fff;
+}
+
+div.carregado {
+    background-color: var(--carregado);
+    left: 0;
+    margin: 0;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.percent {
+    width: 50px;
+    height: 1em;
 }
 
 .container {
@@ -125,9 +147,12 @@ div.barra {
 .msg {
     color: var(--cor_fonte);
     background-color: var(--cor3);
-    padding: 10px;
+    padding: 25px;
     border-radius: 10px;
     width: 90%;
+    margin: auto;
+    line-height: 1.5em;
+    text-align: justify;
 }
 
 .submit{
@@ -139,10 +164,13 @@ div.barra {
     color: var(--cor_fonte);
     background-color: var(--cor3);
     border: none;
+    transition: all;
+    transition-duration: .5s;
 }
 
 .submit:hover {
     border: 2px solid var(--cor_borda);
+    background-color: var(--cor2);
 }
 
 /* Rodapé */

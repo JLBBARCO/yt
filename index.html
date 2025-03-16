@@ -14,52 +14,65 @@
         <a href="https://jlbbarco.github.io/" class="interno">Home</a>
     </nav>
     <main>
-        <section>
-            <form method="get" id="preferencia">
-                <div class="container">
-                    <label for="url">URL: </label>
-                    <input type="url" name="video" id="video" placeholder="https://youtube.com/" class="url">
-                    <div id="tumb" class="thumb"></div>
-                </div>
-                <div class="container">
-                    <h2>Selecione um campo para definir o que fazer</h2>
-                    <div>
-                        <input type="radio" name="select" id="resume" checked>
-                        <label for="resume">Resumo do vídeo <br>
-                            <div class="change">
-                                <div class="msg"></div>
-                                <input type="button" value="Download .txt" class="submit">
-                                <section id="txt" class="txt">
-                                    <div id="barra" class="barra"></div>
-                                    <div id="porcent" class="porcent"></div>
-                                </section>
+        <form method="get" id="preferencia">
+            <div class="container">
+                <label for="url">URL: </label>
+                <input type="url" name="video" id="video" placeholder="https://youtube.com/" class="url">
+            </div>
+            <div class="container">
+                <h2>Selecione um campo para definir o que fazer</h2>
+                <div>
+                    <input type="radio" name="select" id="assistir" value="assistir">
+                        <label for="assistir">Assistir vídeo <br>
+                            <div id="change1" class="change">
+                                <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="youtube_video" class="youtube_video"></iframe>
                             </div>
                         </label>
-                    </div>
-                    <div>
-                        <input type="radio" name="select" id="mp3">
-                        <label for="mp3">Download MP3 <br>
-                            <div class="change" id="change_mp3">
-                                <div id="barra" class="barra"></div>
-                                <div id="porcent" class="porcent"></div>
-                            </div>
-                        </label>
-                    </div>
-                    <div>
-                        <input type="radio" name="select" id="mp4">
-                        <label for="mp4">Download MP4 <br>
-                            <div class="change" id="change_mp4">
-                                <div id="barra" class="barra"></div>
-                                <div id="porcent" class="porcent"></div>
-                            </div>
-                        </label>
-                    </div>
+                    </input>
                 </div>
-                <div class="button">
-                    <input type="submit" value="Confirmar" class="submit">
+                <div>
+                    <input type="radio" name="select" id="resume" value="resume">
+                    <label for="resume">Resumo do vídeo <br>
+                        <div id="change2" class="change">
+                            <div class="msg"></div>
+                            <input type="button" value="Download .txt" class="submit" id="txtdownload">
+                            <section id="txt" class="txt">
+                                <div class="barra">
+                                    <div id="carregado2" class="carregado"></div>
+                                </div>
+                                <div id="percent2" class="percent"></div>
+                            </section>
+                        </div>
+                    </label>
                 </div>
-            </form>
-        </section>
+                <div>
+                    <input type="radio" name="select" id="mp3" value="mp3">
+                    <label for="mp3">Download MP3 <br>
+                        <div id="change3" class="change">
+                            <div class="barra">
+                                <div id="carregado3" class="carregado"></div>
+                            </div>
+                            <div id="percent3" class="percent"></div>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="select" id="mp4" value="mp4">
+                    <label for="mp4">Download MP4 <br>
+                        <div id="change4" class="change">
+                            <div class="barra">
+                                <div id="carregado4" class="carregado"></div>
+                            </div>
+                            <div id="percent4" class="percent3"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Confirmar" class="submit">
+                <input type="reset" value="Limpar" id="reset" class="submit">
+            </div>
+        </form>
     </main>
     <footer>
         <div class="referencia">

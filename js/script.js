@@ -31,6 +31,10 @@ opção.addEventListener("submit", function(event) {
     if (idOpção == 'assistir') {
         change1.style.display = "block";
         let iframe = document.querySelector('iframe#video');
+        let videoUrl = url;
+        iframe.src = url;
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
     } else if (idOpção == 'resume') {
         change2.style.display = 'block';
         let txt = document.querySelector('section#txt'); // Chama a section#id txt que contém a barra de download do txt
@@ -42,6 +46,8 @@ opção.addEventListener("submit", function(event) {
             carregado.style.width = `${progresso}%`;
             percent = document.querySelector('div#percent1')
             percent.innerHTML = `${progresso}%`;
+            carregado.style.width = `${progresso}%`;
+            percent.innerHTML = `${progresso}%`;
         })
     } else if (idOpção == 'mp3') {
         change3.style.display = "block";
@@ -50,13 +56,15 @@ opção.addEventListener("submit", function(event) {
         while (download == true) {
             let mp3 = document.querySelector("input#mp3");
         };
+        carregado.style.width = `${progresso}%`;
+        percent.innerHTML = `${progresso}%`;
     } else if (idOpção == 'mp4') {
         change4.style.display = "block";
         carregado = document.querySelector("div#carregado3");
         percent = document.querySelector("div#percent3");
+        carregado.style.width = `${progresso}%`;
+        percent.innerHTML = `${progresso}%`;
     } else {
         window.alert('Selecione um campo para continuar');
     };
-    carregado.style.width = `${progresso}%`;
-    percent.innerHTML = `${progresso}%`;
 });

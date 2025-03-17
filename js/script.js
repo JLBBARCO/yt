@@ -1,4 +1,4 @@
-// Oculta partes do site que são mostradas depois de selecionar uma ação
+// Hides parts of the site that are shown after selecting an option
 let change1 = document.querySelector("div#change1");
 change1.style.display = "none";
 let change2 = document.querySelector('div#change2');
@@ -8,71 +8,67 @@ change3.style.display = "none";
 let change4 = document.querySelector('div#change4');
 change4.style.display = "none";
 
-// Config de teste
-let progresso = 1
-let progresso1 = progresso; progresso2 = progresso; progresso3 = progresso;
-
-// Funções
+// Functions
 let url = document.getElementById('url');
-let opção = document.querySelector('form#preferencia');
-opção.addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita o comportamento padrão do formulário
+let option = document.querySelector('form#preferencia');
+option.addEventListener("submit", function(event) {
+    event.preventDefault(); // Avoids the default behavior of the form
     
-    // Obtém a opção selecionada
-    let opçãoSelecionada = document.querySelector('input[name="select"]:checked');
-    let idOpção = opçãoSelecionada.value;
+    // Get the selected option
+    let optionSelected = document.querySelector('input[name="select"]:checked');
+    let idOption = optionSelected.value;
     
-    // Verifica qual opção foi selecionada e executa o que cada uma deve fazer
-    if (idOpção == 'assistir') {
-        // Mostra a caixa antes oculta, referente a opção
+    // Check which option was selected and perform what each one should do
+    if (idOption == 'watch') {
+        // Show the previously hidden box, referring to the option
         change1.style.display = "block";
 
-        // Configurações do iframe para mostrar o vídeo
+        // Iframe settings to show the video
         let iframe = document.querySelector('iframe#video');
         iframe.src = url;
-    } else if (idOpção == 'resume') {
-        // Mostra a caixa antes oculta, referente a opção
+    } else if (idOption == 'resume') {
+        // Show the previously hidden box, referring to the option
         change2.style.display = 'block';
 
-        // Declara oculta a barra e a porcentagem de download do txt
+        // Declares the bar and percentage of the txt download hidden
         txt.style.display = "none";
 
-        // Cria um resumo do vídeo
+        // Create a video summary
         let resume = document.querySelector("input#resume");
         
-        // Declara que a let txt_download recebe o botão de download do txt
+        // Declares that the txt_download variable receives the txt download button
         let txt_download = document.querySelector("input#txt_download");
 
-        // Escuta quando o botão for clicado e chama as funções referentes
+        // Listen when the button is clicked and call the functions
         txt_download.addEventListener('click', function(event){
-            // Declara que a barra e a porcentagem do download seja mostrada
+            // Declares that the bar and percentage of the txt download be shown
             let txt = document.querySelector('section#txt');
             txt.style.display = "block";
             
-            // Declara que a barra de progresso e a porcentagem sejam referentes ao download
-            let carregado1 = document.querySelector("div#carregado1");
-            carregado1.style.width = `${progresso1}%`;
+            // Declares that the progress bar and percentage be related to the download
+            let changed1 = document.querySelector("div#changed1");
+            changed1.style.width = `${progress1}%`;
             let percent1 = document.querySelector('div#percent1')
-            carregado1.style.width = `${progresso1}%`;
-            percent1.innerHTML = `${progresso1}%`;
+            changed1.style.width = `${progress1}%`;
+            percent1.innerHTML = `${progress1}%`;
         })
-    } else if (idOpção == 'mp3') {
-        // Declara que a parte selecionada antes oculta, agora seja mostrada
+    } else if (idOption == 'mp3') {
+        // Show the previously hidden box, referring to the option
         change3.style.display = "block";
 
-        // Declara que a barra e a porcentagem de download seja referente ao download real
-        let carregado2 = document.querySelector('div#carregado2');
+        // Declares that the bar and percentage of the download be related to the download
+        let changed2 = document.querySelector('div#changed2');
         let percent2 = document.querySelector('div#percent2');
-        carregado2.style.width = `${progresso2}%`;
-        percent2.innerHTML = `${progresso2}%`;
-    } else if (idOpção == 'mp4') {
-        // Mostra a parte referente
+        changed2.style.width = `${progress2}%`;
+        percent2.innerHTML = `${progress2}%`;
+    } else if (idOption == 'mp4') {
+        // Show the reference part
         change4.style.display = "block";
 
-        // Declara que a barra e a porcentagem do progresso seja referente ao download em tempo real
-        let carregado3 = document.querySelector("div#carregado3");
+        // Declares that the bar and percentage of the progress be related to the download in real time
+        let changed3 = document.querySelector("div#changed3");
         let percent3 = document.querySelector("div#percent3");
-        carregado3.style.width = `${progresso3}%`;
-        percent3.innerHTML = `${progresso3}%`;
+        changed3.style.width = `${progress3}%`;
+        percent3.innerHTML = `${progress3}%`;
     };
 });

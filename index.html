@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Downloader e Resumidor de Vídeos do <a href="https://youtube.com" target="_blank" class="externo">YouTube</a></h1>
+        <h1><a href="https://youtube.com" target="_blank" class="extern">YouTube</a> Video Downloader & Summarizer</h1>
     </header>
     <nav>
-        <a href="https://jlbbarco.github.io/" class="interno">Home</a>
+        <a href="https://jlbbarco.github.io/" class="intern">Home</a>
     </nav>
     <main>
         <form method="get" id="preferencia">
@@ -20,10 +20,10 @@
                 <input type="url" name="video" id="video" placeholder="https://youtube.com/" class="url">
             </div>
             <div class="container">
-                <h2>Selecione um campo para definir o que fazer</h2>
+                <h2>Select a filed to define to do</h2>
                 <div>
-                    <input type="radio" name="select" id="assistir" value="assistir">
-                        <label for="assistir">Assistir vídeo <br>
+                    <input type="radio" name="select" id="assistir" value="watch">
+                        <label for="assistir">Watch video <br>
                             <div id="change1" style="display: none;">
                                 <iframe id="video" frameborder="0" allowfullscreen></iframe>
                             </div>
@@ -32,13 +32,13 @@
                 </div>
                 <div>
                     <input type="radio" name="select" id="resume" value="resume">
-                    <label for="resume">Resumo do vídeo <br>
+                    <label for="resume">Video Summary <br>
                         <div id="change2" class="change">
                             <div class="msg"></div>
                             <input type="button" value="Download .txt" class="submit" id="txt_download">
                             <section id="txt" class="txt">
-                                <div class="barra">
-                                    <div id="carregado1" class="carregado"></div>
+                                <div class="bar">
+                                    <div id="changed1" class="changed"></div>
                                 </div>
                                 <div id="percent1" class="percent"></div>
                             </section>
@@ -49,8 +49,8 @@
                     <input type="radio" name="select" id="mp3" value="mp3">
                     <label for="mp3">Download MP3 <br>
                         <div id="change3" class="change">
-                            <div class="barra">
-                                <div id="carregado2" class="carregado"></div>
+                            <div class="bar">
+                                <div id="changed2" class="changed"></div>
                             </div>
                             <div id="percent2" class="percent"></div>
                         </div>
@@ -60,23 +60,23 @@
                     <input type="radio" name="select" id="mp4" value="mp4">
                     <label for="mp4">Download MP4 <br>
                         <div id="change4" class="change">
-                            <div class="barra">
-                                <div id="carregado3" class="carregado"></div>
+                            <div class="bar">
+                                <div id="changed3" class="changed"></div>
                             </div>
-                            <div id="percent3" class="percent3"></div>
+                            <div id="percent3" class="percent"></div>
                         </div>
                     </label>
                 </div>
             </div>
             <div class="button">
-                <input type="submit" value="Confirmar" class="submit">
-                <input type="reset" value="Limpar" id="reset" class="submit">
+                <input type="submit" value="Confirm" class="submit">
+                <input type="reset" value="Clean" id="reset" class="submit">
             </div>
         </form>
     </main>
     <footer>
-        <div class="referencia">
-            Site criado por <a href="http://github.com/JLBBARCO" target="_blank" rel="noopener noreferrer">José Luiz B Barco</a>
+        <div class="reference">
+            Website created by <a href="http://github.com/JLBBARCO" target="_blank" rel="noopener noreferrer">José Luiz B Barco</a>
         </div>
     </footer>
     <script src="js/script.js"></script>

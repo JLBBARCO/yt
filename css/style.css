@@ -1,34 +1,34 @@
 @charset "UTF-8";
 
-/* Config padrão */
+/* Default settings */
 :root {
-    --cor_fonte: #fff;
-    --cor_borda: #bbb;
-    --cor_form: #8888;
-    --cor_bc_hover: #9c0000;
-    --carregado: #00ff00;
-    --cor1: #ff0000;
-    --cor2: #222;
-    --cor3: #888;
-    --sombra: #0000006b;
+    --font_color: #fff;
+    --border_color: #bbb;
+    --form_color: #8888;
+    --color_bc_hover: #9c0000;
+    --changed: #00ff00;
+    --color1: #ff0000;
+    --color2: #222;
+    --color3: #888;
+    --shadow: #0000006b;
 }
 
-/* Config geral */
+/* General config */
 * {
     color: lightgreen;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor_fonte);
+    color: var(--font_color);
 }
 
 body {
-    background-color: var(--cor3);
+    background-color: var(--color3);
 }
 
 a.intern, a.extern {
     text-decoration: none;
-    color: var(--cor_fonte);
+    color: var(--font_color);
     transition: all;
     transition-duration: .5s;
 }
@@ -45,8 +45,8 @@ a.extern:hover, a.interno:hover {
 header {
     padding: 100px 25px 25px;
     text-align: center;
-    background-color: var(--cor1);
-    box-shadow: 0px 7px 7px var(--sombra);
+    background-color: var(--color1);
+    box-shadow: 0px 7px 7px var(--shadow);
 }
 
 /* Nav Bar */
@@ -55,25 +55,25 @@ nav {
     width: 100vw;
     top: 0;
     padding: 25px;
-    background-color: var(--cor1);
-    box-shadow: 0px 7px 7px var(--sombra);
+    background-color: var(--color1);
+    box-shadow: 0px 7px 7px var(--shadow);
 }
 
 nav a:hover {
     padding: 10px;
-    border: 2px solid var(--cor_borda);
+    border: 2px solid var(--border_color);
     border-radius: 10px;
-    background-color: var(--cor_bc_hover);
+    background-color: var(--color_bc_hover);
 }
 
-/* Conteúdo */
+/* Content */
 main {
     padding: 50px;
     margin: auto;
     min-width: 250px;
     max-width: 750px;
-    box-shadow: inset 0px -7px 7px var(--sombra);
-    background-color: var(--cor2);
+    box-shadow: inset 0px -7px 7px var(--shadow);
+    background-color: var(--color2);
 }
 
 h2 {
@@ -94,7 +94,7 @@ form {
 }
 
 .url:hover {
-    border: 2px solid var(--cor_borda);
+    border: 2px solid var(--border_color);
 }
 
 h2 {
@@ -121,7 +121,7 @@ div.bar {
 }
 
 div.changed {
-    background-color: var(--carregado);
+    background-color: var(--changed);
     left: 0;
     margin: 0;
     border-radius: 10px;
@@ -134,14 +134,14 @@ div.changed {
 }
 
 .container {
-    background-color: var(--cor_form);
+    background-color: var(--form_color);
     padding: 15px;
     border-radius: 15px;
 }
 
 .msg {
-    color: var(--cor_fonte);
-    background-color: var(--cor3);
+    color: var(--font_color);
+    background-color: var(--color3);
     padding: 25px;
     border-radius: 10px;
     width: 90%;
@@ -156,29 +156,29 @@ div.changed {
     margin-top: 30px;
     padding: 15px;
     border-radius: 10px;
-    color: var(--cor_fonte);
-    background-color: var(--cor3);
+    color: var(--font_color);
+    background-color: var(--color3);
     border: none;
     transition: all;
     transition-duration: .5s;
 }
 
 .submit:hover {
-    border: 2px solid var(--cor_borda);
-    background-color: var(--cor2);
+    border: 2px solid var(--border_color);
+    background-color: var(--color2);
 }
 
 /* Footer */
 footer {
     padding: 25px;
     text-align: center;
-    box-shadow: 0px -7px 7px var(--sombra);
-    background-color: var(--cor1);
+    box-shadow: 0px -7px 7px var(--shadow);
+    background-color: var(--color1);
 }
 
 footer a {
     text-decoration: none;
-    color: var(--cor_fonte);
+    color: var(--font_color);
 }
 
 footer a:hover {

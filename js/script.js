@@ -10,7 +10,7 @@ change4.style.display = "none";
 
 // Functions
 let url = document.getElementById("url");
-let option = document.querySelector("form#preferencia");
+let option = document.querySelector("form#preference");
 option.addEventListener("submit", function (event) {
     event.preventDefault(); // Avoids the default behavior of the form
 

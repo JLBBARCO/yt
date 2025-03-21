@@ -5,27 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube Extensões</title>
     <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="icon" href="https://www.youtube.com/s/desktop/ee47b5e0/img/logos/favicon_32x32.png" sizes="32x32">
 </head>
 <body>
     <header>
         <h1><a href="https://youtube.com" target="_blank" class="extern">YouTube</a> Video Downloader & Summarizer</h1>
     </header>
-    <nav>
-        <a href="https://jlbbarco.github.io/" class="intern">Home</a>
-    </nav>
     <main>
-        <form method="get" id="preferencia">
+        <form method="get" id="preference">
             <div class="container">
                 <label for="url">URL: </label>
                 <input type="url" name="video" id="video" placeholder="https://youtube.com/" class="url">
             </div>
             <div class="container">
-                <h2>Select a filed to define to do</h2>
+                <h2>Select a file to define to do</h2>
                 <div>
                     <input type="radio" name="select" id="assistir" value="watch">
                         <label for="assistir">Watch video <br>
                             <div id="change1" style="display: none;">
-                                <iframe id="video" frameborder="0" allowfullscreen src="https://youtu.be/GWULnkTnapM?si=DyKEYI-dJvn_Amyu"></iframe>
+                                <iframe id="video" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </label>
                     </input>
@@ -70,7 +68,7 @@
             </div>
             <div class="button">
                 <input type="submit" value="Confirm" class="submit">
-                <input type="reset" value="Clear" id="reset" class="submit">
+                <input type="reset" value="Clean" id="reset" class="submit">
             </div>
         </form>
     </main>
